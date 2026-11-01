@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { lazy, Suspense } from "react";
 
-import MainLayout from "../layout/MainLayout.jsx";
+import MainLayout from "../layout/Mainlayout";
 
 // pages lazy
 const Home = lazy(() => import("../pages/Home"));
