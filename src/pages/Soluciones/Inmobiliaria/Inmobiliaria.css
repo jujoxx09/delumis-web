@@ -1,0 +1,1404 @@
+
+/* =========================================================
+   DELUMIS · INMOBILIARIA
+========================================================= */
+
+.inmobiliariaPage {
+  --blue: #06b6d4;
+  --blue-dark: #0891b2;
+  --black: #05070b;
+  --dark: #0a0f18;
+  --text: #111827;
+  --muted: #64748b;
+  --line: rgba(15, 23, 42, 0.1);
+
+  background: #f7f9fc;
+  color: var(--text);
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.sectionHeading {
+  max-width: 800px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.sectionHeading > span,
+.inmoHero__eyebrow,
+.inmoProperties__content > span,
+.inmoAdmin__content > span,
+.inmoCTA > span {
+  display: inline-block;
+  margin-bottom: 18px;
+
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+
+  color: var(--blue);
+}
+
+.sectionHeading h2 {
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 64px);
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.sectionHeading h2 strong {
+  display: block;
+  color: var(--blue);
+  font-weight: inherit;
+}
+
+.sectionHeading p {
+  max-width: 650px;
+  margin: 25px auto 0;
+
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.inmoBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 15px 23px;
+
+  border-radius: 12px;
+
+  text-decoration: none;
+  font-weight: 700;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
+}
+
+.inmoBtn:hover {
+  transform: translateY(-3px);
+}
+
+.inmoBtn--primary {
+  color: white;
+  background: #0891b2;
+
+  box-shadow:
+    0 15px 35px rgba(8, 145, 178, .22);
+}
+
+.inmoBtn--primary:hover {
+  background: #06b6d4;
+}
+
+.inmoBtn--secondary {
+  color: var(--text);
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.7);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.inmoHero {
+  min-height: 850px;
+
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  gap: 50px;
+
+  padding: 150px 7% 100px;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(6,182,212,.12),
+      transparent 35%
+    ),
+    #f7f9fc;
+}
+
+.inmoHero__grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: .4;
+
+  background-image:
+    linear-gradient(rgba(6,182,212,.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(6,182,212,.06) 1px, transparent 1px);
+
+  background-size: 60px 60px;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black,
+    transparent
+  );
+}
+
+.inmoHero__content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 680px;
+}
+
+.inmoHero h1 {
+  margin: 0;
+
+  font-size: clamp(50px, 6vw, 82px);
+  line-height: .95;
+
+  letter-spacing: -.065em;
+}
+
+.inmoHero h1 span {
+  display: block;
+  color: var(--blue);
+}
+
+.inmoHero p {
+  max-width: 600px;
+
+  margin: 30px 0 0;
+
+  font-size: 18px;
+  line-height: 1.7;
+
+  color: var(--muted);
+}
+
+.inmoHero__buttons {
+  display: flex;
+  gap: 14px;
+
+  margin-top: 35px;
+}
+
+
+/* HERO PROPERTY */
+
+.inmoHero__visual {
+  position: relative;
+
+  height: 560px;
+
+  perspective: 1200px;
+}
+
+.propertyCard {
+  position: absolute;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+
+  background: white;
+
+  box-shadow:
+    0 35px 90px rgba(15,23,42,.18);
+}
+
+.propertyCard--main {
+  width: min(480px, 85%);
+  right: 5%;
+  top: 50%;
+
+  transform:
+    translateY(-50%)
+    rotate(3deg);
+}
+
+.propertyCard--back {
+  width: min(420px, 75%);
+  left: 5%;
+  top: 13%;
+
+  transform: rotate(-8deg);
+
+  opacity: .7;
+}
+
+.propertyCard__image {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.propertyCard--back .propertyCard__image {
+  height: 430px;
+}
+
+.propertyCard img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.propertyCard__image span {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+
+  padding: 7px 11px;
+
+  border-radius: 8px;
+
+  background: rgba(0,0,0,.75);
+  color: white;
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.propertyCard__info {
+  padding: 24px;
+}
+
+.propertyCard__info small {
+  color: var(--blue);
+  font-weight: 800;
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.propertyCard__info h3 {
+  margin: 8px 0 20px;
+
+  font-size: 24px;
+}
+
+.propertyCard__details {
+  display: flex;
+  gap: 18px;
+
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.propertyCard__details strong {
+  margin-left: auto;
+  color: var(--text);
+}
+
+
+/* =========================================================
+   TYPES
+========================================================= */
+
+.inmoTypes {
+  padding: 130px 7%;
+  background: white;
+}
+
+.inmoTypes__grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.inmoTypeCard {
+  position: relative;
+
+  padding: 35px 28px;
+
+  min-height: 330px;
+
+  border: 1px solid var(--line);
+  border-radius: 20px;
+
+  background: #fff;
+
+  text-decoration: none;
+  color: var(--text);
+
+  transition:
+    border .3s ease,
+    box-shadow .3s ease;
+}
+
+.inmoTypeCard:hover {
+  border-color: rgba(6,182,212,.45);
+
+  box-shadow:
+    0 20px 60px rgba(15,23,42,.08);
+}
+
+.inmoTypeCard__number {
+  position: absolute;
+
+  top: 25px;
+  right: 25px;
+
+  color: #cbd5e1;
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.inmoTypeCard__icon {
+  width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 15px;
+
+  background: rgba(6,182,212,.09);
+  color: var(--blue);
+
+  font-size: 22px;
+}
+
+.inmoTypeCard h3 {
+  margin-top: 30px;
+
+  font-size: 21px;
+}
+
+.inmoTypeCard p {
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.inmoTypeCard__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-top: 25px;
+
+  color: var(--blue);
+
+  font-size: 12px;
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   PROPERTIES
+========================================================= */
+
+.inmoProperties {
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 80px;
+
+  padding: 140px 8%;
+
+  background: #f1f5f9;
+}
+
+.inmoProperties__content {
+  max-width: 560px;
+}
+
+.inmoProperties__content > span {
+  font-weight: 800;
+}
+
+.inmoProperties h2 {
+  margin: 0;
+
+  font-size: clamp(40px, 5vw, 65px);
+  line-height: 1;
+
+  letter-spacing: -.05em;
+}
+
+.inmoProperties h2 strong {
+  display: block;
+  color: var(--blue);
+}
+
+.inmoProperties p {
+  margin-top: 25px;
+
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.inmoProperties ul {
+  display: grid;
+  gap: 14px;
+
+  margin: 35px 0 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.inmoProperties li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  font-weight: 600;
+}
+
+.inmoProperties li svg {
+  color: var(--blue);
+}
+
+
+/* PROPERTY SHOWCASE */
+
+.propertyShowcase {
+  position: relative;
+
+  min-height: 520px;
+}
+
+.propertyShowcase__image {
+  height: 520px;
+
+  overflow: hidden;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 30px 80px rgba(15,23,42,.18);
+}
+
+.propertyShowcase__image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.propertyShowcase__floating {
+  position: absolute;
+
+  right: -25px;
+  bottom: 30px;
+
+  width: 240px;
+
+  padding: 22px;
+
+  border-radius: 18px;
+
+  background: rgba(255,255,255,.92);
+
+  backdrop-filter: blur(15px);
+
+  box-shadow:
+    0 20px 50px rgba(15,23,42,.15);
+}
+
+.propertyShowcase__floating small {
+  color: var(--blue);
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.propertyShowcase__floating strong {
+  display: block;
+
+  margin: 8px 0;
+
+  font-size: 17px;
+}
+
+.propertyShowcase__floating span {
+  color: var(--blue);
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   FEATURES · DARK
+========================================================= */
+
+.inmoFeatures {
+  padding: 140px 7%;
+
+  background:
+    radial-gradient(
+      circle at 50% 0,
+      rgba(6,182,212,.12),
+      transparent 35%
+    ),
+    var(--black);
+
+  color: white;
+}
+
+.sectionHeading--light p {
+  color: #94a3b8;
+}
+
+.inmoFeatures__grid {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 18px;
+}
+
+.inmoFeature {
+  position: relative;
+
+  padding: 35px;
+
+  min-height: 260px;
+
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.05),
+      rgba(255,255,255,.015)
+    );
+
+  transition:
+    border .3s ease,
+    background .3s ease;
+}
+
+.inmoFeature:hover {
+  border-color: rgba(6,182,212,.4);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(6,182,212,.08),
+      rgba(255,255,255,.02)
+    );
+}
+
+.inmoFeature__number {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+
+  color: #334155;
+
+  font-weight: 800;
+}
+
+.inmoFeature__icon {
+  color: var(--blue);
+  font-size: 25px;
+}
+
+.inmoFeature h3 {
+  margin-top: 30px;
+
+  font-size: 20px;
+}
+
+.inmoFeature p {
+  color: #94a3b8;
+
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   GROWTH
+========================================================= */
+
+.inmoGrowth {
+  padding: 140px 7%;
+
+  background: white;
+}
+
+.inmoGrowth__grid {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.growthCard {
+  padding: 30px;
+
+  border-radius: 20px;
+
+  border: 1px solid var(--line);
+
+  background: #fff;
+
+  transition:
+    box-shadow .3s ease,
+    border .3s ease;
+}
+
+.growthCard:hover {
+  border-color: rgba(6,182,212,.4);
+
+  box-shadow:
+    0 20px 50px rgba(15,23,42,.08);
+}
+
+.growthCard__icon {
+  color: var(--blue);
+  font-size: 23px;
+}
+
+.growthCard > span {
+  display: block;
+
+  margin-top: 25px;
+
+  color: #cbd5e1;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.growthCard h3 {
+  font-size: 19px;
+}
+
+.growthCard p {
+  color: var(--muted);
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ADMIN
+========================================================= */
+
+.inmoAdmin {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+
+  align-items: center;
+
+  gap: 80px;
+
+  padding: 140px 7%;
+
+  background: #eef2f7;
+}
+
+.inmoAdmin__visual {
+  perspective: 1000px;
+}
+
+.adminWindow {
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #0b111c;
+
+  box-shadow:
+    0 40px 90px rgba(15,23,42,.2);
+
+  transform: rotateY(-5deg) rotateX(3deg);
+}
+
+.adminWindow__top {
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 0 15px;
+
+  background: #111827;
+}
+
+.adminWindow__top span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #475569;
+}
+
+.adminWindow__content {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+
+  min-height: 340px;
+}
+
+.adminSidebar {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+
+  padding: 25px;
+
+  background: #080c14;
+
+  color: #64748b;
+
+  font-size: 11px;
+}
+
+.adminSidebar strong {
+  margin-bottom: 20px;
+  color: var(--blue);
+}
+
+.adminDashboard {
+  padding: 40px;
+  color: white;
+}
+
+.adminDashboard small {
+  color: var(--blue);
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.adminDashboard h3 {
+  font-size: 28px;
+}
+
+.adminStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+
+  margin-top: 40px;
+}
+
+.adminStats div {
+  padding: 18px;
+
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 12px;
+}
+
+.adminStats strong {
+  display: block;
+  color: white;
+  font-size: 25px;
+}
+
+.adminStats span {
+  color: #64748b;
+  font-size: 10px;
+}
+
+.inmoAdmin__content {
+  max-width: 500px;
+}
+
+.inmoAdmin__content h2 {
+  margin: 0;
+
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: 1;
+  letter-spacing: -.05em;
+}
+
+.inmoAdmin__content h2 strong {
+  display: block;
+  color: var(--blue);
+}
+
+.inmoAdmin__content p {
+  margin: 25px 0;
+
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.textLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--blue);
+
+  text-decoration: none;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   TEMPLATES
+========================================================= */
+
+.inmoTemplates {
+  padding: 140px 7%;
+  background: white;
+}
+
+.inmoTemplates__track {
+  max-width: 1200px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.templateCard {
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  text-decoration: none;
+
+  color: var(--text);
+
+  border: 1px solid var(--line);
+
+  background: white;
+
+  transition: box-shadow .3s ease;
+}
+
+.templateCard:hover {
+  box-shadow:
+    0 25px 60px rgba(15,23,42,.12);
+}
+
+.templateCard__image {
+  height: 300px;
+
+  overflow: hidden;
+}
+
+.templateCard__image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform .6s ease;
+}
+
+.templateCard:hover img {
+  transform: scale(1.06);
+}
+
+.templateCard__info {
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  padding: 22px;
+}
+
+.templateCard__info span {
+  grid-column: 1 / -1;
+
+  color: var(--blue);
+
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.templateCard__info h3 {
+  margin: 7px 0 0;
+
+  font-size: 20px;
+}
+
+.templateCard__info svg {
+  align-self: end;
+
+  color: var(--blue);
+}
+
+.templatesButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  width: fit-content;
+
+  margin: 45px auto 0;
+
+  padding: 14px 22px;
+
+  border-radius: 10px;
+
+  background: var(--black);
+  color: white;
+
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.inmoProcess {
+  padding: 140px 7%;
+
+  background: #f1f5f9;
+}
+
+.processTimeline {
+  max-width: 900px;
+
+  margin: auto;
+}
+
+.processStep {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+
+  align-items: center;
+
+  padding: 25px 0;
+
+  border-bottom: 1px solid var(--line);
+}
+
+.processStep > span {
+  color: var(--blue);
+
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.processStep p {
+  margin: 0;
+
+  font-size: 17px;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.inmoFAQ {
+  padding: 140px 7%;
+  background: white;
+}
+
+.faqList {
+  max-width: 900px;
+
+  margin: auto;
+}
+
+.faqItem {
+  border-bottom: 1px solid var(--line);
+}
+
+.faqItem summary {
+  display: grid;
+  grid-template-columns: 50px 1fr 30px;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 25px 0;
+
+  cursor: pointer;
+
+  list-style: none;
+
+  font-weight: 700;
+}
+
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+.faqItem summary span {
+  color: var(--blue);
+
+  font-size: 11px;
+}
+
+.faqItem summary b {
+  color: var(--blue);
+
+  font-size: 22px;
+
+  transition: transform .3s ease;
+}
+
+.faqItem[open] summary b {
+  transform: rotate(45deg);
+}
+
+.faqItem p {
+  max-width: 750px;
+
+  margin: -5px 0 25px 65px;
+
+  color: var(--muted);
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.inmoCTA {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 150px 7%;
+
+  text-align: center;
+
+  color: white;
+
+  background:
+    radial-gradient(
+      circle at 50% 0,
+      rgba(6,182,212,.18),
+      transparent 40%
+    ),
+    #05070b;
+}
+
+.inmoCTA__glow {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: rgba(6,182,212,.08);
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+.inmoCTA h2 {
+  position: relative;
+
+  max-width: 900px;
+
+  margin: auto;
+
+  font-size: clamp(42px, 6vw, 75px);
+
+  line-height: .95;
+
+  letter-spacing: -.06em;
+}
+
+.inmoCTA h2 strong {
+  display: block;
+
+  color: var(--blue);
+}
+
+.inmoCTA p {
+  position: relative;
+
+  max-width: 600px;
+
+  margin: 30px auto;
+
+  color: #94a3b8;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .inmoTypes__grid,
+  .inmoGrowth__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inmoFeatures__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .inmoHero {
+    grid-template-columns: 1fr;
+  }
+
+  .inmoHero__content {
+    margin: auto;
+    text-align: center;
+  }
+
+  .inmoHero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .inmoHero__buttons {
+    justify-content: center;
+  }
+
+  .inmoHero__visual {
+    max-width: 700px;
+    width: 100%;
+    margin: auto;
+  }
+
+  .inmoProperties,
+  .inmoAdmin {
+    grid-template-columns: 1fr;
+  }
+
+  .inmoProperties__content,
+  .inmoAdmin__content {
+    max-width: 750px;
+    margin: auto;
+  }
+
+  .inmoAdmin__visual {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+  }
+
+}
+
+
+/* TABLET */
+
+@media (max-width: 768px) {
+
+  .inmoHero {
+    padding: 120px 6% 70px;
+  }
+
+  .inmoHero h1 {
+    font-size: 48px;
+  }
+
+  .inmoHero__visual {
+    height: 450px;
+  }
+
+  .propertyCard__image {
+    height: 230px;
+  }
+
+  .propertyCard--back {
+    left: 0;
+  }
+
+  .propertyCard--main {
+    right: 0;
+  }
+
+  .inmoTypes,
+  .inmoProperties,
+  .inmoFeatures,
+  .inmoGrowth,
+  .inmoAdmin,
+  .inmoTemplates,
+  .inmoProcess,
+  .inmoFAQ {
+    padding: 90px 6%;
+  }
+
+  .inmoTypes__grid,
+  .inmoFeatures__grid,
+  .inmoGrowth__grid,
+  .inmoTemplates__track {
+    grid-template-columns: 1fr;
+  }
+
+  .inmoTypeCard {
+    min-height: auto;
+  }
+
+  .propertyShowcase {
+    min-height: 420px;
+  }
+
+  .propertyShowcase__image {
+    height: 420px;
+  }
+
+}
+
+
+/* MÓVIL */
+
+@media (max-width: 600px) {
+
+  .sectionHeading {
+    margin-bottom: 45px;
+  }
+
+  .sectionHeading h2 {
+    font-size: 40px;
+  }
+
+  .sectionHeading p {
+    font-size: 15px;
+  }
+
+  .inmoHero {
+    min-height: auto;
+  }
+
+  .inmoHero h1 {
+    font-size: 42px;
+  }
+
+  .inmoHero p {
+    font-size: 15px;
+  }
+
+  .inmoHero__buttons {
+    flex-direction: column;
+  }
+
+  .inmoBtn {
+    width: 100%;
+  }
+
+  .inmoHero__visual {
+    height: 340px;
+  }
+
+  .propertyCard--main {
+    width: 85%;
+  }
+
+  .propertyCard--back {
+    width: 70%;
+  }
+
+  .propertyCard__image {
+    height: 180px;
+  }
+
+  .propertyCard__info {
+    padding: 15px;
+  }
+
+  .propertyCard__info h3 {
+    font-size: 18px;
+  }
+
+  .propertyCard__details {
+    gap: 8px;
+    font-size: 10px;
+  }
+
+  .propertyShowcase__floating {
+    right: 10px;
+    bottom: 15px;
+  }
+
+  .adminWindow__content {
+    grid-template-columns: 90px 1fr;
+  }
+
+  .adminSidebar {
+    padding: 15px 10px;
+  }
+
+  .adminDashboard {
+    padding: 20px;
+  }
+
+  .adminStats {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
+
+  .processStep {
+    grid-template-columns: 45px 1fr;
+  }
+
+  .processStep p {
+    font-size: 14px;
+  }
+
+  .faqItem summary {
+    grid-template-columns: 35px 1fr 25px;
+    font-size: 14px;
+  }
+
+  .faqItem p {
+    margin-left: 50px;
+    font-size: 14px;
+  }
+
+  .inmoCTA {
+    padding: 100px 6%;
+  }
+
+  .inmoCTA h2 {
+    font-size: 43px;
+  }
+
+}
+

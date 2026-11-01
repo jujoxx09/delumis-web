@@ -1,0 +1,244 @@
+.caracteristicas {
+  width: 100%;
+  padding: 120px 6%;
+  background: #070b14;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.caracteristicas-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.caracteristicas-header {
+  max-width: 800px;
+  margin-bottom: 70px;
+}
+
+.caracteristicas-label {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+
+  color: #06b6d4;
+}
+
+.caracteristicas-header h2 {
+  margin: 0;
+
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  font-weight: 700;
+}
+
+.caracteristicas-header h2 span {
+  color: #06b6d4;
+}
+
+.caracteristicas-header p {
+  max-width: 650px;
+  margin-top: 30px;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* =========================
+   GRID
+========================= */
+
+.caracteristicas-grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 18px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.caracteristica-card {
+  position: relative;
+
+  min-height: 280px;
+
+  padding: 28px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.015)
+    );
+
+  overflow: hidden;
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    background 0.4s ease;
+}
+
+.caracteristica-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -100px;
+  right: -100px;
+
+  border-radius: 50%;
+
+  background: #06b6d4;
+
+  filter: blur(80px);
+
+  opacity: 0;
+
+  transition: opacity 0.4s ease;
+}
+
+.caracteristica-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(6, 182, 212, 0.45);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(6, 182, 212, 0.09),
+      rgba(255, 255, 255, 0.02)
+    );
+}
+
+.caracteristica-card:hover::before {
+  opacity: 0.18;
+}
+
+/* =========================
+   NUMBER
+========================= */
+
+.caracteristica-number {
+  position: relative;
+  z-index: 2;
+
+  font-size: 0.75rem;
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+
+  color: #06b6d4;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.caracteristica-title {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  overflow: visible;
+}
+
+.caracteristica-title h3 {
+  margin: 0;
+}
+
+/* =========================
+   LINE
+========================= */
+
+.caracteristica-line {
+  position: relative;
+  z-index: 2;
+
+  width: 35px;
+  height: 2px;
+
+  background: #06b6d4;
+
+  transition: width 0.4s ease;
+}
+
+.caracteristica-card:hover .caracteristica-line {
+  width: 70px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .caracteristicas {
+    padding: 100px 5%;
+  }
+
+  .caracteristicas-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .caracteristica-card {
+    min-height: 250px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+  .caracteristicas {
+    padding: 80px 20px;
+  }
+
+  .caracteristicas-header {
+    margin-bottom: 45px;
+  }
+
+  .caracteristicas-header h2 {
+    font-size: clamp(2.3rem, 12vw, 3.5rem);
+  }
+
+  .caracteristicas-header p {
+    font-size: 0.95rem;
+    margin-top: 22px;
+  }
+
+  .caracteristicas-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .caracteristica-card {
+    min-height: 220px;
+    padding: 24px;
+  }
+}

@@ -1,0 +1,485 @@
+/* =========================================================
+   FINAL CTA
+========================================================= */
+
+.final-cta {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 620px;
+
+  display: flex;
+
+  align-items: center;
+
+  background:
+    #050a12;
+
+  color: white;
+
+  overflow: hidden;
+}
+
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.final-cta__grid {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    70px 70px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 25%,
+      black 75%,
+      transparent
+    );
+
+  opacity: 0.7;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   GLOWS
+========================================================= */
+
+.final-cta__glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(80px);
+
+  animation:
+    finalCtaFloat 8s ease-in-out infinite;
+}
+
+.final-cta__glow--one {
+  width: 450px;
+  height: 450px;
+
+  top: -250px;
+  left: 20%;
+
+  background:
+    rgba(6, 182, 212, 0.13);
+}
+
+.final-cta__glow--two {
+  width: 350px;
+  height: 350px;
+
+  right: -180px;
+  bottom: -180px;
+
+  background:
+    rgba(37, 99, 235, 0.12);
+
+  animation-delay: -4s;
+}
+
+@keyframes finalCtaFloat {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform:
+      translate3d(
+        20px,
+        25px,
+        0
+      );
+  }
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.final-cta__container {
+  position: relative;
+
+  width: min(1180px, 90%);
+
+  margin: 0 auto;
+
+  padding: 100px 0;
+
+  z-index: 2;
+}
+
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.final-cta__label {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin-bottom: 45px;
+
+  color:
+    rgba(255, 255, 255, 0.45);
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+}
+
+.final-cta__label-dot {
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #06b6d4;
+
+  box-shadow:
+    0 0 12px
+    rgba(6, 182, 212, 0.9);
+
+  animation:
+    ctaPulse 2s ease-in-out infinite;
+}
+
+.final-cta__label svg {
+  color: #06b6d4;
+}
+
+@keyframes ctaPulse {
+
+  0%,
+  100% {
+    opacity: 0.5;
+
+    transform: scale(0.8);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform: scale(1.2);
+  }
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.final-cta__content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.5fr)
+    minmax(260px, 0.6fr);
+
+  gap: 100px;
+
+  align-items: end;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.final-cta__heading h2 {
+  margin: 0;
+
+  font-size: clamp(
+    55px,
+    7vw,
+    100px
+  );
+
+  line-height: 0.9;
+
+  font-weight: 400;
+
+  letter-spacing: -0.065em;
+}
+
+.final-cta__heading h2 span {
+  color: #06b6d4;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.final-cta__description {
+  padding-bottom: 8px;
+}
+
+.final-cta__description p {
+  max-width: 330px;
+
+  margin: 0 0 30px;
+
+  color:
+    rgba(255, 255, 255, 0.43);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.final-cta__button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 6px 6px 6px 19px;
+
+  border: 1px solid
+    rgba(6, 182, 212, 0.3);
+
+  border-radius: 50px;
+
+  background:
+    rgba(6, 182, 212, 0.07);
+
+  color: white;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.final-cta__button:hover {
+  background:
+    rgba(6, 182, 212, 0.14);
+
+  border-color:
+    rgba(6, 182, 212, 0.65);
+
+  transform:
+    translateY(-3px);
+
+  box-shadow:
+    0 15px 35px
+    rgba(6, 182, 212, 0.13);
+}
+
+.final-cta__button-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 50%;
+
+  background: #06b6d4;
+
+  color: #041018;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.final-cta__button:hover
+.final-cta__button-icon {
+  transform:
+    rotate(45deg);
+}
+
+
+/* =========================================================
+   BOTTOM
+========================================================= */
+
+.final-cta__bottom {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-top: 100px;
+
+  color:
+    rgba(255, 255, 255, 0.2);
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.18em;
+}
+
+.final-cta__line {
+  width: 35px;
+  height: 1px;
+
+  background:
+    rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .final-cta {
+    min-height: auto;
+  }
+
+  .final-cta__content {
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+  }
+
+  .final-cta__description {
+    padding: 0;
+  }
+
+  .final-cta__description p {
+    max-width: 500px;
+  }
+
+  .final-cta__bottom {
+    margin-top: 70px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .final-cta {
+    min-height: auto;
+  }
+
+  .final-cta__container {
+    width: 88%;
+
+    padding: 85px 0;
+  }
+
+  .final-cta__label {
+    margin-bottom: 35px;
+
+    font-size: 8px;
+  }
+
+  .final-cta__heading h2 {
+    font-size: clamp(
+      48px,
+      14vw,
+      70px
+    );
+
+    line-height: 0.92;
+  }
+
+  .final-cta__content {
+    gap: 35px;
+  }
+
+  .final-cta__description p {
+    font-size: 12px;
+
+    line-height: 1.7;
+
+    margin-bottom: 25px;
+  }
+
+  .final-cta__button {
+    padding-left: 17px;
+
+    font-size: 10px;
+  }
+
+  .final-cta__button-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .final-cta__bottom {
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 65px;
+
+    font-size: 7px;
+  }
+
+  .final-cta__line {
+    width: 20px;
+  }
+
+  .final-cta__glow--one {
+    width: 300px;
+    height: 300px;
+
+    top: -150px;
+    left: 0;
+  }
+
+  .final-cta__glow--two {
+    width: 250px;
+    height: 250px;
+  }
+}

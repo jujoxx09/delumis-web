@@ -1,0 +1,29 @@
+.anime-card {
+  width: 400px;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,.05);
+
+  backdrop-filter: blur(20px);
+
+  text-align: center;
+
+  margin: 100px auto;
+
+  opacity: 0;
+}
+
+.anime-card button {
+  margin-top: 20px;
+
+  padding: 12px 24px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+}

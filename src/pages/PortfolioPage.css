@@ -1,0 +1,105 @@
+.portfolioPage {
+  color: white;
+  padding: 120px 20px;
+}
+
+/* HERO */
+.portfolioPage__hero {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 80px;
+}
+
+.portfolioPage__hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.portfolioPage__hero p {
+  color: rgba(255,255,255,0.6);
+}
+
+/* STATS */
+.portfolioPage__stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.stat h2 {
+  font-size: 36px;
+  color: #4cc9f0;
+}
+
+/* SECCIONES */
+.portfolioPage section {
+  margin-bottom: 80px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+/* STEPS */
+.steps {
+  display: grid;
+  gap: 15px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255,255,255,0.05);
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.step span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #4cc9f0;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolioPage__stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .portfolioPage__hero h1 {
+    font-size: 28px;
+  }
+}

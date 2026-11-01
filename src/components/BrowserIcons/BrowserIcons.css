@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #262626;
+}
+
+/* contenedor equivalente a ul original */
+.browser-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* li */
+.browser-list li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+/* link circular */
+.browser-list li a {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+
+  text-align: center;
+  line-height: 60px;
+
+  background: #333;
+  border-radius: 50%;
+
+  font-size: 28px;
+  color: #666;
+
+  transition: 0.5s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* glow base */
+.browser-list li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+  background: #ffee10;
+
+  transition: 0.5s;
+  transform: scale(0.9);
+
+  z-index: -1;
+}
+
+/* hover glow expand */
+.browser-list li a:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+
+/* hover icon */
+.browser-list li a:hover {
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}

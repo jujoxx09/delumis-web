@@ -1,0 +1,682 @@
+.precios {
+  position: relative;
+
+  width: 100%;
+
+  padding: 140px 0;
+
+  background: #f5f7fa;
+
+  color: #070b14;
+
+  overflow: hidden;
+}
+
+/* =========================
+   BACKGROUND
+========================= */
+
+.precios::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(6, 182, 212, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(6, 182, 212, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  pointer-events: none;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 85%
+  );
+}
+
+/* =========================
+   GLOWS
+========================= */
+
+.precios-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  filter: blur(100px);
+}
+
+.precios-glow-1 {
+  width: 400px;
+  height: 400px;
+
+  top: -250px;
+  left: -200px;
+
+  background: rgba(6, 182, 212, 0.08);
+}
+
+.precios-glow-2 {
+  width: 350px;
+  height: 350px;
+
+  right: -200px;
+  bottom: -200px;
+
+  background: rgba(21, 154, 251, 0.07);
+}
+
+.precios-container {
+  position: relative;
+
+  width: min(1350px, 90%);
+
+  margin: 0 auto;
+
+  z-index: 1;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.precios-header {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 50px;
+
+  margin-bottom: 75px;
+}
+
+.precios-heading {
+  max-width: 820px;
+}
+
+.precios-label {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #0891b2;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.2em;
+
+  text-transform: uppercase;
+}
+
+.precios-heading h2 {
+  margin: 0;
+
+  font-size: clamp(47px, 6vw, 80px);
+
+  line-height: 0.96;
+
+  letter-spacing: -0.06em;
+
+  font-weight: 700;
+}
+
+.precios-heading h2 span {
+  color: #0891b2;
+}
+
+.precios-heading p {
+  max-width: 650px;
+
+  margin: 28px 0 0;
+
+  color: rgba(7, 11, 20, 0.55);
+
+  font-size: 16px;
+
+  line-height: 1.7;
+}
+
+/* =========================
+   HEADER LINK
+========================= */
+
+.precios-header-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  flex-shrink: 0;
+
+  padding: 14px 21px;
+
+  border: 1px solid rgba(8, 145, 178, 0.35);
+
+  border-radius: 100px;
+
+  background: rgba(8, 145, 178, 0.05);
+
+  color: #087f9c;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.precios-header-link:hover {
+  background: #0891b2;
+
+  border-color: #0891b2;
+
+  color: white;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.precios-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 18px;
+
+  align-items: stretch;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.precio-card {
+  position: relative;
+
+  display: flex;
+
+  flex-direction: column;
+
+  min-height: 570px;
+
+  padding: 34px;
+
+  border: 1px solid rgba(7, 11, 20, 0.1);
+
+  border-radius: 22px;
+
+  background: white;
+
+  box-shadow:
+    0 10px 35px rgba(7, 11, 20, 0.04);
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.precio-card:hover {
+  border-color: rgba(8, 145, 178, 0.35);
+
+  box-shadow:
+    0 25px 70px rgba(7, 11, 20, 0.1),
+    0 0 40px rgba(6, 182, 212, 0.06);
+}
+
+/* =========================
+   FEATURED
+========================= */
+
+.precio-card-featured {
+  background: #070b14;
+
+  color: white;
+
+  border-color: #070b14;
+
+  box-shadow:
+    0 20px 60px rgba(7, 11, 20, 0.2);
+}
+
+.precio-card-featured:hover {
+  border-color: #06b6d4;
+}
+
+/* =========================
+   POPULAR
+========================= */
+
+.precio-popular {
+  position: absolute;
+
+  top: 18px;
+  right: 18px;
+
+  padding: 7px 11px;
+
+  border-radius: 100px;
+
+  background: #06b6d4;
+
+  color: #070b14;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+}
+
+/* =========================
+   TOP
+========================= */
+
+.precio-top {
+  position: relative;
+
+  padding-bottom: 28px;
+
+  border-bottom: 1px solid rgba(7, 11, 20, 0.08);
+}
+
+.precio-card-featured .precio-top {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.precio-number {
+  display: block;
+
+  margin-bottom: 28px;
+
+  color: rgba(8, 145, 178, 0.55);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.15em;
+}
+
+.precio-card-featured .precio-number {
+  color: rgba(6, 182, 212, 0.65);
+}
+
+.precio-top h3 {
+  margin: 0;
+
+  font-size: 31px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.04em;
+}
+
+.precio-top p {
+  min-height: 65px;
+
+  margin: 12px 0 0;
+
+  color: rgba(7, 11, 20, 0.5);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+.precio-card-featured .precio-top p {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* =========================
+   PRICE
+========================= */
+
+.precio-value {
+  margin-top: 28px;
+
+  color: #070b14;
+
+  font-size: clamp(29px, 3vw, 38px);
+
+  font-weight: 600;
+
+  letter-spacing: -0.04em;
+}
+
+.precio-card-featured .precio-value {
+  color: #06b6d4;
+}
+
+.precio-small {
+  display: block;
+
+  margin-top: 5px;
+
+  color: rgba(7, 11, 20, 0.35);
+
+  font-size: 10px;
+}
+
+.precio-card-featured .precio-small {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+/* =========================
+   FEATURES
+========================= */
+
+.precio-features {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 13px;
+
+  margin-top: 30px;
+}
+
+.precio-feature {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color: rgba(7, 11, 20, 0.65);
+
+  font-size: 12px;
+}
+
+.precio-card-featured .precio-feature {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.precio-check {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 20px;
+  height: 20px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: rgba(8, 145, 178, 0.09);
+
+  color: #0891b2;
+}
+
+.precio-card-featured .precio-check {
+  background: rgba(6, 182, 212, 0.12);
+
+  color: #06b6d4;
+}
+
+/* =========================
+   CARD LINK
+========================= */
+
+.precio-card-link {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 10px;
+
+  margin-top: auto;
+
+  padding-top: 25px;
+
+  border-top: 1px solid rgba(7, 11, 20, 0.08);
+
+  color: #070b14;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 0.3s ease,
+    gap 0.3s ease;
+}
+
+.precio-card-featured .precio-card-link {
+  border-color: rgba(255, 255, 255, 0.1);
+
+  color: white;
+}
+
+.precio-card-link:hover {
+  color: #0891b2;
+}
+
+.precio-card-featured .precio-card-link:hover {
+  color: #06b6d4;
+}
+
+/* =========================
+   RECURRING
+========================= */
+
+.precios-recurring {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 40px;
+
+  margin-top: 25px;
+
+  padding: 30px 35px;
+
+  border: 1px solid rgba(8, 145, 178, 0.15);
+
+  border-radius: 20px;
+
+  background: rgba(8, 145, 178, 0.04);
+}
+
+.recurring-label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #0891b2;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  text-transform: uppercase;
+}
+
+.recurring-content h3 {
+  margin: 0;
+
+  font-size: 23px;
+
+  font-weight: 500;
+
+  letter-spacing: -0.035em;
+}
+
+.recurring-content h3 span {
+  color: #0891b2;
+}
+
+.recurring-content p {
+  margin: 7px 0 0;
+
+  color: rgba(7, 11, 20, 0.45);
+
+  font-size: 12px;
+}
+
+.recurring-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  flex-shrink: 0;
+
+  padding: 13px 19px;
+
+  border-radius: 100px;
+
+  background: #070b14;
+
+  color: white;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease;
+}
+
+.recurring-button:hover {
+  background: #0891b2;
+
+  transform: translateY(-2px);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+  .precios {
+    padding: 110px 0;
+  }
+
+  .precios-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .precio-card {
+    min-height: auto;
+  }
+
+  .precio-top p {
+    min-height: auto;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+  .precios {
+    padding: 85px 0;
+  }
+
+  .precios-container {
+    width: 88%;
+  }
+
+  .precios-header {
+    display: block;
+
+    margin-bottom: 45px;
+  }
+
+  .precios-heading h2 {
+    font-size: 44px;
+  }
+
+  .precios-heading p {
+    margin-top: 20px;
+
+    font-size: 14px;
+  }
+
+  .precios-header-link {
+    margin-top: 25px;
+  }
+
+  .precios-grid {
+    gap: 14px;
+  }
+
+  .precio-card {
+    padding: 25px;
+
+    border-radius: 17px;
+  }
+
+  .precio-top h3 {
+    font-size: 27px;
+  }
+
+  .precio-value {
+    font-size: 32px;
+  }
+
+  .precios-recurring {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 22px;
+
+    padding: 25px;
+  }
+
+  .recurring-content h3 {
+    font-size: 21px;
+  }
+
+  .recurring-button {
+    width: 100%;
+
+    justify-content: center;
+  }
+}

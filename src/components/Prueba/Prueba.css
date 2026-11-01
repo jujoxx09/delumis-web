@@ -1,0 +1,269 @@
+/* =========================================
+   CONTENEDOR PRINCIPAL
+========================================= */
+
+.prueba {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  padding: 80px 20px 0;
+    background: linear-gradient(
+    to right,
+    #fff7ad 0%,
+    #ffa9f9 100%
+  );
+}
+
+
+/* =========================================
+   TEXTO + BOTÓN
+========================================= */
+
+.prueba__content {
+  width: 100%;
+  max-width: 800px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  margin-bottom: 50px;
+}
+
+
+/* =========================================
+   TÍTULO
+========================================= */
+
+.prueba__title {
+  margin: 0 0 15px;
+
+  font-size: clamp(2rem, 4vw, 3.2rem);
+
+  font-weight: 700;
+
+  line-height: 1.15;
+
+  color: #111827;
+}
+
+
+/* =========================================
+   SUBTÍTULO
+========================================= */
+
+.prueba__subtitle {
+  max-width: 650px;
+
+  margin: 0 0 28px;
+
+  font-size: clamp(1rem, 1.7vw, 1.2rem);
+
+  line-height: 1.6;
+
+  color: #6b7280;
+}
+
+
+/* =========================================
+   IMAGEN
+========================================= */
+
+.prueba__image-container {
+  width: 100%;
+
+  max-width: 1366px;
+
+  display: flex;
+  justify-content: center;
+
+  overflow: hidden;
+
+  border-radius: 24px;
+}
+
+
+.prueba__image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  /*
+    MUY IMPORTANTE:
+    No usamos cover.
+    La imagen conserva su proporción original.
+  */
+}
+
+
+/* =========================================
+   BOTÓN
+========================================= */
+
+.prueba__button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 0;
+
+  padding: 14px 28px;
+
+  border: none;
+  border-radius: 9999px;
+
+  background-color: #116dff;
+
+  color: #ffffff;
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  box-shadow: 0 4px 14px rgba(17, 109, 255, 0.3);
+
+  transition:
+    background-color 0.3s ease,
+    gap 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* =========================================
+   FLECHA
+========================================= */
+
+.prueba__arrow {
+  opacity: 0;
+
+  width: 0;
+
+  transform: translateX(-8px);
+
+  transition:
+    opacity 0.3s ease,
+    width 0.3s ease,
+    transform 0.3s ease;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.prueba__button:hover {
+  background-color: #0052cc;
+
+  gap: 10px;
+
+  transform: translateY(-2px);
+}
+
+
+.prueba__button:hover .prueba__arrow {
+  opacity: 1;
+
+  width: auto;
+
+  transform: translateX(0);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .prueba {
+    padding: 60px 16px 0;
+  }
+
+  .prueba__content {
+    margin-bottom: 35px;
+  }
+
+  .prueba__title {
+    font-size: 2rem;
+  }
+
+  .prueba__subtitle {
+    font-size: 1rem;
+
+    max-width: 550px;
+
+    margin-bottom: 22px;
+  }
+
+  .prueba__image-container {
+    border-radius: 18px;
+  }
+
+}
+
+
+/* =========================================
+   MÓVIL
+========================================= */
+
+@media (max-width: 480px) {
+
+  .prueba {
+    padding: 45px 12px 0;
+  }
+
+  .prueba__content {
+    margin-bottom: 28px;
+
+    padding: 0 10px;
+  }
+
+  .prueba__title {
+    font-size: 1.7rem;
+
+    line-height: 1.2;
+  }
+
+  .prueba__subtitle {
+    font-size: 0.95rem;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+  }
+
+  .prueba__button {
+    padding: 12px 22px;
+
+    font-size: 0.9rem;
+
+    gap: 8px;
+  }
+
+  /*
+    En móvil mostramos siempre la flecha
+    porque no hay hover real.
+  */
+  .prueba__arrow {
+    opacity: 1;
+
+    width: auto;
+
+    transform: none;
+  }
+
+  .prueba__image-container {
+    border-radius: 14px;
+  }
+
+}

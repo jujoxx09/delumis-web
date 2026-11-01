@@ -1,0 +1,112 @@
+.floating-wrapper {
+
+  perspective: 1500px;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+
+  padding: 120px 20px;
+}
+
+.floating-glow {
+  position: absolute;
+
+  width: 400px;
+  height: 400px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(124,58,237,.35),
+    transparent 70%
+  );
+
+  filter: blur(60px);
+
+  z-index: 0;
+}
+
+.floating-card {
+  animation: floatRotate 6s ease-in-out infinite;
+}
+
+@keyframes floatRotate {
+  0% {
+    transform:
+      translateY(0px)
+      rotateY(-10deg);
+  }
+
+  50% {
+    transform:
+      translateY(-15px)
+      rotateY(10deg);
+  }
+
+  100% {
+    transform:
+      translateY(0px)
+      rotateY(-10deg);
+  }
+}
+
+.floating-card:hover {
+  transform:
+    translateY(-10px)
+    rotateX(6deg)
+    rotateY(-6deg);
+
+  box-shadow:
+    0 30px 60px rgba(0,0,0,.3);
+}
+
+.floating-badge {
+  display: inline-block;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,.08);
+
+  margin-bottom: 20px;
+
+  font-size: 12px;
+
+  letter-spacing: 2px;
+}
+
+.floating-card h2 {
+  font-size: 2rem;
+
+  margin-bottom: 20px;
+}
+
+.floating-card p {
+  color: rgba(255,255,255,.7);
+
+  line-height: 1.7;
+
+  margin-bottom: 25px;
+}
+
+.floating-card button {
+  padding: 14px 24px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: .3s;
+}
+
+.floating-card button:hover {
+  transform: scale(1.05);
+}

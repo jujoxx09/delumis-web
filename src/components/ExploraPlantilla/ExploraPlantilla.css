@@ -1,0 +1,412 @@
+.explora-plantilla {
+  position: relative;
+  width: 100%;
+  padding: 120px 0;
+  background: #f5f5f2;
+  color: #101010;
+  overflow: hidden;
+}
+
+.explora-container {
+  width: min(1400px, 90%);
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.explora-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 40px;
+  margin-bottom: 55px;
+}
+
+.explora-title {
+  max-width: 700px;
+}
+
+.explora-label {
+  display: inline-block;
+  margin-bottom: 18px;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  color: #777;
+}
+
+.explora-title h2 {
+  margin: 0;
+
+  font-size: clamp(42px, 5vw, 76px);
+  line-height: 0.98;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+.explora-title h2 span {
+  color: #888;
+}
+
+.explora-title p {
+  max-width: 550px;
+  margin: 25px 0 0;
+
+  font-size: 17px;
+  line-height: 1.6;
+  color: #686868;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.explora-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  flex-shrink: 0;
+}
+
+.explora-more {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 14px 22px;
+
+  border: none;
+  border-radius: 100px;
+
+  background: #111;
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.explora-more:hover {
+  background: #06b6d4;
+}
+
+.explora-arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.explora-arrows button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid #d6d6d2;
+  border-radius: 50%;
+
+  background: transparent;
+  color: #111;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.explora-arrows button:hover {
+  background: #111;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   CAROUSEL
+========================= */
+
+.plantillas-carousel {
+  display: flex;
+  gap: 25px;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  padding-bottom: 15px;
+
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+}
+
+.plantillas-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.plantilla-card {
+  position: relative;
+
+  flex: 0 0 390px;
+
+  scroll-snap-align: start;
+}
+
+.plantilla-image {
+  position: relative;
+
+  width: 100%;
+  height: 500px;
+
+  overflow: hidden;
+
+  border-radius: 20px;
+
+  background: #ddd;
+}
+
+.plantilla-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.plantilla-card:hover .plantilla-image img {
+  transform: scale(1.06);
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.plantilla-overlay {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+
+  padding: 22px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.4),
+    transparent 40%
+  );
+
+  opacity: 0;
+
+  transition: opacity 0.35s ease;
+}
+
+.plantilla-card:hover .plantilla-overlay {
+  opacity: 1;
+}
+
+.plantilla-overlay button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: white;
+  color: #111;
+
+  cursor: pointer;
+}
+
+/* =========================
+   INFO
+========================= */
+
+.plantilla-info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  padding: 18px 4px 0;
+}
+
+.plantilla-info span {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #888;
+}
+
+.plantilla-info h3 {
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.plantilla-number {
+  font-size: 13px;
+  color: #999;
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.explora-bottom {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  margin-top: 35px;
+
+  color: #999;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.explora-line {
+  width: 100px;
+  height: 1px;
+  background: #d6d6d2;
+  overflow: hidden;
+}
+
+.explora-line div {
+  width: 45%;
+  height: 100%;
+  background: #111;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .explora-plantilla {
+    padding: 90px 0;
+  }
+
+  .explora-header {
+    align-items: flex-start;
+  }
+
+  .explora-title h2 {
+    font-size: clamp(40px, 8vw, 60px);
+  }
+
+  .plantilla-card {
+    flex-basis: 340px;
+  }
+
+  .plantilla-image {
+    height: 450px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+  .explora-plantilla {
+    padding: 75px 0;
+  }
+
+  .explora-container {
+    width: 88%;
+  }
+
+  .explora-header {
+    display: block;
+    margin-bottom: 35px;
+  }
+
+  .explora-title h2 {
+    font-size: 42px;
+    line-height: 1;
+  }
+
+  .explora-title p {
+    font-size: 15px;
+    margin-top: 18px;
+  }
+
+  .explora-actions {
+    justify-content: space-between;
+    margin-top: 28px;
+  }
+
+  .explora-more {
+    padding: 13px 19px;
+  }
+
+  .explora-arrows button {
+    width: 43px;
+    height: 43px;
+  }
+
+  .plantillas-carousel {
+    gap: 16px;
+
+    margin-right: -6%;
+    padding-right: 6%;
+  }
+
+  .plantilla-card {
+    flex: 0 0 82vw;
+  }
+
+  .plantilla-image {
+    height: 110vw;
+    max-height: 500px;
+    border-radius: 16px;
+  }
+
+  .plantilla-overlay {
+    opacity: 1;
+  }
+
+  .plantilla-overlay button {
+    width: 46px;
+    height: 46px;
+  }
+
+  .plantilla-info h3 {
+    font-size: 19px;
+  }
+
+  .explora-bottom {
+    margin-top: 25px;
+  }
+}

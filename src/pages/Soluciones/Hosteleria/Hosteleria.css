@@ -1,0 +1,1738 @@
+/* =========================================================
+   DELUMIS
+   SOLUCIONES — HOSTELERÍA
+========================================================= */
+
+.hosteleriaPage {
+  width: 100%;
+  overflow: hidden;
+
+  background: #f5f7f9;
+
+  color: #071018;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.solutionEyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  color: #0891b2;
+
+  font-size: 8px;
+
+  font-weight: 800;
+
+  letter-spacing: .16em;
+}
+
+.solutionEyebrow::before {
+  content: "";
+
+  width: 18px;
+  height: 1px;
+
+  background: #06b6d4;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hosteleriaHero {
+  position: relative;
+
+  min-height: 820px;
+
+  padding:
+    150px 7%
+    100px;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  align-items: center;
+
+  gap: 60px;
+
+  overflow: hidden;
+
+  background:
+    #eef2f5;
+}
+
+
+.hosteleriaHero__background {
+  position: absolute;
+
+  inset: 0;
+
+  pointer-events: none;
+}
+
+
+.hosteleriaHero__grid {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(6,182,212,.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(6,182,212,.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 70px 70px;
+
+  mask-image:
+    radial-gradient(
+      circle at 60% 50%,
+      black,
+      transparent 75%
+    );
+}
+
+
+.hosteleriaHero__glow {
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  right: 5%;
+  top: 20%;
+
+  border-radius: 50%;
+
+  background:
+    rgba(6,182,212,.08);
+
+  filter: blur(100px);
+}
+
+
+/* CONTENT */
+
+.hosteleriaHero__content {
+  position: relative;
+
+  z-index: 3;
+
+  max-width: 620px;
+}
+
+
+.hosteleriaHero__content h1 {
+  margin:
+    25px 0 0;
+
+  font-size:
+    clamp(
+      55px,
+      7vw,
+      100px
+    );
+
+  line-height: .86;
+
+  letter-spacing: -.075em;
+
+  font-weight: 400;
+}
+
+
+.hosteleriaHero__content h1 span {
+  color: #0891b2;
+}
+
+
+.hosteleriaHero__content p {
+  max-width: 500px;
+
+  margin:
+    35px 0 0;
+
+  color:
+    rgba(7,16,24,.48);
+
+  font-size: 12px;
+
+  line-height: 1.9;
+}
+
+
+.hosteleriaHero__buttons {
+  display: flex;
+
+  gap: 10px;
+
+  margin-top: 35px;
+}
+
+
+/* BUTTON */
+
+.solutionButton {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding:
+    13px 19px;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    background .3s ease;
+}
+
+
+.solutionButton:hover {
+  transform:
+    translateY(-3px);
+}
+
+
+.solutionButton--primary {
+  background:
+    linear-gradient(
+      135deg,
+      #071018,
+      #18242e
+    );
+
+  color: white;
+
+  box-shadow:
+    0 12px 30px
+    rgba(7,16,24,.12);
+}
+
+
+.solutionButton--secondary {
+  color: #071018;
+
+  border:
+    1px solid
+    rgba(7,16,24,.13);
+
+  background:
+    rgba(255,255,255,.55);
+
+  backdrop-filter: blur(10px);
+}
+
+
+/* VISUAL */
+
+.hosteleriaHero__visual {
+  position: relative;
+
+  height: 570px;
+
+  z-index: 2;
+}
+
+
+.hosteleriaHero__image-card {
+  position: absolute;
+
+  right: 0;
+  top: 50%;
+
+  width: 92%;
+
+  height: 470px;
+
+  transform:
+    translateY(-50%)
+    rotate(2deg);
+
+  overflow: hidden;
+
+  border-radius: 5px;
+
+  box-shadow:
+    0 35px 80px
+    rgba(7,16,24,.16);
+
+  border:
+    1px solid
+    rgba(255,255,255,.7);
+}
+
+
+.hosteleriaHero__image-card img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s ease;
+}
+
+
+.hosteleriaHero__image-card:hover img {
+  transform:
+    scale(1.04);
+}
+
+
+.hosteleriaHero__floating-card {
+  position: absolute;
+
+  left: 0;
+  bottom: 65px;
+
+  width: 170px;
+
+  padding: 20px;
+
+  background:
+    rgba(7,16,24,.92);
+
+  color: white;
+
+  box-shadow:
+    0 25px 50px
+    rgba(7,16,24,.18);
+
+  backdrop-filter:
+    blur(12px);
+}
+
+
+.hosteleriaHero__floating-card span {
+  display: block;
+
+  margin-bottom: 35px;
+
+  color: #06b6d4;
+
+  font-size: 7px;
+
+  font-weight: 800;
+
+  letter-spacing: .15em;
+}
+
+
+.hosteleriaHero__floating-card strong {
+  font-size: 15px;
+
+  line-height: 1.1;
+
+  font-weight: 400;
+}
+
+
+.hosteleriaHero__floating-line {
+  width: 35px;
+  height: 1px;
+
+  margin-top: 25px;
+
+  background: #06b6d4;
+}
+
+
+.hosteleriaHero__scroll {
+  position: absolute;
+
+  bottom: 35px;
+  left: 7%;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color:
+    rgba(7,16,24,.3);
+
+  font-size: 7px;
+
+  letter-spacing: .15em;
+}
+
+
+.hosteleriaHero__scroll span {
+  width: 30px;
+  height: 1px;
+
+  background: #06b6d4;
+}
+
+
+/* =========================================================
+   SECTION HEADER
+========================================================= */
+
+.sectionHeader {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 50px;
+
+  margin-bottom: 70px;
+}
+
+
+.sectionHeader > div {
+  max-width: 700px;
+}
+
+
+.sectionHeader h2 {
+  margin:
+    25px 0 0;
+
+  font-size:
+    clamp(
+      48px,
+      6vw,
+      78px
+    );
+
+  line-height: .88;
+
+  letter-spacing: -.065em;
+
+  font-weight: 400;
+}
+
+
+.sectionHeader h2 span {
+  color: #0891b2;
+}
+
+
+.sectionHeader > p {
+  max-width: 350px;
+
+  margin: 0;
+
+  color:
+    rgba(7,16,24,.43);
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+
+.sectionHeader--center {
+  display: block;
+
+  max-width: 700px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  text-align: center;
+}
+
+
+.sectionHeader--center > p {
+  margin:
+    30px auto 0;
+}
+
+
+/* =========================================================
+   NICHES
+========================================================= */
+
+.hosteleriaNiches {
+  padding:
+    140px 6%;
+
+  background: #f5f7f9;
+}
+
+
+.hosteleriaNiches__grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(12, 1fr);
+
+  gap: 12px;
+}
+
+
+.nicheCard {
+  position: relative;
+
+  min-height: 420px;
+
+  overflow: hidden;
+
+  color: white;
+
+  text-decoration: none;
+
+  background: #111;
+
+  grid-column:
+    span 4;
+}
+
+
+.nicheCard:nth-child(1) {
+  grid-column:
+    span 6;
+}
+
+
+.nicheCard:nth-child(2) {
+  grid-column:
+    span 6;
+}
+
+
+.nicheCard:nth-child(3),
+.nicheCard:nth-child(4),
+.nicheCard:nth-child(5) {
+  grid-column:
+    span 4;
+}
+
+
+.nicheCard__image {
+  position: absolute;
+
+  inset: 0;
+}
+
+
+.nicheCard__image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform .8s ease;
+}
+
+
+.nicheCard:hover
+.nicheCard__image img {
+  transform:
+    scale(1.06);
+}
+
+
+.nicheCard__overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.78)
+    );
+}
+
+
+.nicheCard__content {
+  position: absolute;
+
+  inset:
+    auto 22px 22px;
+
+  display: grid;
+
+  grid-template-columns:
+    25px 1fr 35px;
+
+  gap: 10px;
+
+  align-items: end;
+}
+
+
+.nicheCard__content > span {
+  color:
+    rgba(255,255,255,.45);
+
+  font-size: 8px;
+}
+
+
+.nicheCard h3 {
+  margin: 0;
+
+  font-size: 23px;
+
+  font-weight: 400;
+
+  letter-spacing: -.03em;
+}
+
+
+.nicheCard p {
+  max-width: 310px;
+
+  margin:
+    8px 0 0;
+
+  color:
+    rgba(255,255,255,.6);
+
+  font-size: 8px;
+
+  line-height: 1.6;
+}
+
+
+.nicheCard__arrow {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 32px;
+  height: 32px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.25);
+
+  border-radius: 50%;
+
+  transition:
+    background .3s ease,
+    transform .3s ease;
+}
+
+
+.nicheCard:hover
+.nicheCard__arrow {
+  background: #06b6d4;
+
+  border-color: #06b6d4;
+
+  color: #071018;
+
+  transform:
+    translateX(4px);
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.hosteleriaFeatures {
+  padding:
+    150px 6%;
+
+  background: white;
+}
+
+
+.hosteleriaFeatures__grid {
+  max-width: 1100px;
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+
+.featureCard {
+  min-height: 260px;
+
+  padding: 25px;
+
+  border:
+    1px solid
+    rgba(7,16,24,.08);
+
+  background:
+    #f7f9fa;
+
+  transition:
+    border-color .3s ease;
+}
+
+
+.featureCard:hover {
+  border-color:
+    rgba(6,182,212,.35);
+}
+
+
+.featureCard__top {
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #0891b2;
+}
+
+
+.featureCard__top span {
+  color:
+    rgba(7,16,24,.25);
+
+  font-size: 8px;
+}
+
+
+.featureCard h3 {
+  margin:
+    65px 0 12px;
+
+  font-size: 18px;
+
+  font-weight: 500;
+}
+
+
+.featureCard p {
+  margin: 0;
+
+  color:
+    rgba(7,16,24,.43);
+
+  font-size: 9px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   OPTIMIZE DARK
+========================================================= */
+
+.hosteleriaOptimize {
+  position: relative;
+
+  padding:
+    140px 6%;
+
+  overflow: hidden;
+
+  background:
+    #070d14;
+
+  color: white;
+}
+
+
+.hosteleriaOptimize__glow {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -150px;
+  top: 0;
+
+  border-radius: 50%;
+
+  background:
+    rgba(6,182,212,.08);
+
+  filter: blur(100px);
+}
+
+
+.hosteleriaOptimize__header {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 650px;
+
+  margin-bottom: 75px;
+}
+
+
+.hosteleriaOptimize__header h2 {
+  margin:
+    25px 0;
+
+  font-size:
+    clamp(
+      55px,
+      7vw,
+      95px
+    );
+
+  line-height: .85;
+
+  letter-spacing: -.07em;
+
+  font-weight: 400;
+}
+
+
+.hosteleriaOptimize__header h2 span {
+  color: #06b6d4;
+}
+
+
+.hosteleriaOptimize__header p {
+  max-width: 470px;
+
+  color:
+    rgba(255,255,255,.38);
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+
+.hosteleriaOptimize__grid {
+  position: relative;
+
+  z-index: 2;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 10px;
+}
+
+
+.optimizationCard {
+  min-height: 230px;
+
+  padding: 24px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  background:
+    rgba(255,255,255,.025);
+
+  transition:
+    border-color .3s ease;
+}
+
+
+.optimizationCard:hover {
+  border-color:
+    rgba(6,182,212,.4);
+}
+
+
+.optimizationCard__number {
+  color:
+    rgba(255,255,255,.2);
+
+  font-size: 8px;
+}
+
+
+.optimizationCard__icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  margin-top: 35px;
+
+  border-radius: 9px;
+
+  background:
+    rgba(6,182,212,.08);
+
+  color: #06b6d4;
+}
+
+
+.optimizationCard h3 {
+  margin:
+    18px 0 10px;
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+
+.optimizationCard p {
+  margin: 0;
+
+  color:
+    rgba(255,255,255,.34);
+
+  font-size: 9px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   TEMPLATES
+========================================================= */
+
+.hosteleriaTemplates {
+  padding:
+    140px 6%;
+
+  background:
+    #eef2f5;
+}
+
+
+.textLink {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  color: #0891b2;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+}
+
+
+.templatesCarousel {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+.templatesCarousel__track {
+  display: flex;
+
+  gap: 14px;
+
+  width: max-content;
+
+  padding:
+    10px 0 30px;
+}
+
+
+.templateCard {
+  width: 330px;
+
+  color: #071018;
+
+  text-decoration: none;
+}
+
+
+.templateCard__image {
+  position: relative;
+
+  height: 420px;
+
+  overflow: hidden;
+
+  background: white;
+}
+
+
+.templateCard__image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform .7s ease;
+}
+
+
+.templateCard:hover
+.templateCard__image img {
+  transform:
+    scale(1.04);
+}
+
+
+.templateCard__image > span {
+  position: absolute;
+
+  right: 15px;
+  bottom: 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding:
+    9px 12px;
+
+  background:
+    rgba(7,16,24,.88);
+
+  color: white;
+
+  font-size: 8px;
+}
+
+
+.templateCard__info {
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-top: 15px;
+}
+
+
+.templateCard__info h3 {
+  margin: 0;
+
+  font-size: 17px;
+
+  font-weight: 500;
+}
+
+
+.templateCard__info p {
+  margin:
+    4px 0 0;
+
+  color:
+    rgba(7,16,24,.4);
+
+  font-size: 8px;
+}
+
+
+.templateCard__info > span {
+  color:
+    rgba(7,16,24,.25);
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   BENEFITS
+========================================================= */
+
+.hosteleriaBenefits {
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  min-height: 650px;
+
+  background: white;
+}
+
+
+.hosteleriaBenefits__image {
+  overflow: hidden;
+}
+
+
+.hosteleriaBenefits__image img {
+  width: 100%;
+  height: 100%;
+
+  min-height: 600px;
+
+  object-fit: cover;
+
+  filter:
+    grayscale(100%);
+}
+
+
+.hosteleriaBenefits__content {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  padding:
+    100px 10%;
+}
+
+
+.hosteleriaBenefits__content h2 {
+  margin:
+    25px 0;
+
+  font-size:
+    clamp(
+      50px,
+      6vw,
+      75px
+    );
+
+  line-height: .88;
+
+  letter-spacing: -.065em;
+
+  font-weight: 400;
+}
+
+
+.hosteleriaBenefits__content h2 span {
+  color: #0891b2;
+}
+
+
+.hosteleriaBenefits__content > p {
+  max-width: 470px;
+
+  color:
+    rgba(7,16,24,.45);
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+
+.benefitList {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+
+  margin-top: 30px;
+}
+
+
+.benefitList div {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color:
+    rgba(7,16,24,.65);
+
+  font-size: 9px;
+}
+
+
+.benefitList svg {
+  flex-shrink: 0;
+
+  color: #06b6d4;
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.hosteleriaFAQ {
+  padding:
+    140px 6%;
+
+  background:
+    #f5f7f9;
+}
+
+
+.faqList {
+  width: min(850px, 100%);
+
+  margin:
+    70px auto 0;
+}
+
+
+.faqItem {
+  border-top:
+    1px solid
+    rgba(7,16,24,.12);
+}
+
+
+.faqItem:last-child {
+  border-bottom:
+    1px solid
+    rgba(7,16,24,.12);
+}
+
+
+.faqItem summary {
+  display: grid;
+
+  grid-template-columns:
+    35px 1fr 25px;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding:
+    24px 0;
+
+  cursor: pointer;
+
+  list-style: none;
+}
+
+
+.faqItem summary::-webkit-details-marker {
+  display: none;
+}
+
+
+.faqItem summary > span {
+  color:
+    #06b6d4;
+
+  font-size: 8px;
+}
+
+
+.faqItem summary strong {
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+
+.faqItem summary svg {
+  transition:
+    transform .3s ease;
+}
+
+
+.faqItem[open]
+summary svg {
+  transform:
+    rotate(90deg);
+}
+
+
+.faqItem__answer {
+  padding:
+    0 50px 25px;
+}
+
+
+.faqItem__answer p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color:
+    rgba(7,16,24,.43);
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   RELATED
+========================================================= */
+
+.hosteleriaRelated {
+  padding:
+    120px 6%;
+
+  background:
+    white;
+}
+
+
+.hosteleriaRelated h2 {
+  margin:
+    25px 0 60px;
+
+  font-size:
+    clamp(
+      50px,
+      6vw,
+      80px
+    );
+
+  line-height: .88;
+
+  letter-spacing: -.065em;
+
+  font-weight: 400;
+}
+
+
+.hosteleriaRelated h2 span {
+  color: #0891b2;
+}
+
+
+.relatedLinks {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  border-top:
+    1px solid
+    rgba(7,16,24,.1);
+}
+
+
+.relatedLinks a {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding:
+    22px 10px;
+
+  color: #071018;
+
+  text-decoration: none;
+
+  font-size: 10px;
+
+  border-right:
+    1px solid
+    rgba(7,16,24,.1);
+
+  transition:
+    color .3s ease,
+    padding .3s ease;
+}
+
+
+.relatedLinks a:last-child {
+  border-right: none;
+}
+
+
+.relatedLinks a:hover {
+  padding-left: 18px;
+
+  color: #0891b2;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.hosteleriaCTA {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    160px 6%;
+
+  text-align: center;
+
+  background:
+    #070d14;
+
+  color: white;
+}
+
+
+.hosteleriaCTA__glow {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    rgba(6,182,212,.08);
+
+  filter: blur(100px);
+}
+
+
+.hosteleriaCTA > * {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+.hosteleriaCTA h2 {
+  margin:
+    30px auto;
+
+  font-size:
+    clamp(
+      55px,
+      8vw,
+      105px
+    );
+
+  line-height: .84;
+
+  letter-spacing: -.075em;
+
+  font-weight: 400;
+}
+
+
+.hosteleriaCTA h2 span {
+  color: #06b6d4;
+}
+
+
+.hosteleriaCTA > p {
+  max-width: 450px;
+
+  margin:
+    35px auto;
+
+  color:
+    rgba(255,255,255,.38);
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .hosteleriaHero {
+    grid-template-columns: 1fr;
+
+    padding-top: 130px;
+  }
+
+  .hosteleriaHero__content {
+    max-width: 700px;
+  }
+
+  .hosteleriaHero__visual {
+    height: 500px;
+
+    width: min(700px, 100%);
+
+    margin: auto;
+  }
+
+  .hosteleriaHero__image-card {
+    width: 90%;
+  }
+
+  .hosteleriaNiches__grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .nicheCard,
+  .nicheCard:nth-child(n) {
+    grid-column:
+      span 1;
+  }
+
+  .nicheCard:nth-child(1) {
+    grid-column:
+      1 / -1;
+  }
+
+  .hosteleriaFeatures__grid,
+  .hosteleriaOptimize__grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .hosteleriaBenefits {
+    grid-template-columns: 1fr;
+  }
+
+  .hosteleriaBenefits__image {
+    height: 500px;
+  }
+
+  .relatedLinks {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .relatedLinks a:nth-child(2) {
+    border-right: none;
+  }
+
+  .relatedLinks a {
+    border-bottom:
+      1px solid
+      rgba(7,16,24,.1);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .hosteleriaHero {
+    min-height: auto;
+
+    padding:
+      120px 6%
+      80px;
+
+    gap: 40px;
+  }
+
+  .hosteleriaHero__content h1 {
+    font-size: 55px;
+  }
+
+  .hosteleriaHero__buttons {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .solutionButton {
+    width: 100%;
+  }
+
+  .hosteleriaHero__visual {
+    height: 380px;
+  }
+
+  .hosteleriaHero__image-card {
+    width: 94%;
+
+    height: 330px;
+  }
+
+  .hosteleriaHero__floating-card {
+    bottom: 20px;
+
+    width: 140px;
+  }
+
+  .hosteleriaHero__scroll {
+    display: none;
+  }
+
+
+  /* HEADERS */
+
+  .sectionHeader {
+    display: block;
+
+    margin-bottom: 50px;
+  }
+
+  .sectionHeader > p {
+    margin-top: 25px;
+  }
+
+
+  /* NICHES */
+
+  .hosteleriaNiches {
+    padding:
+      100px 6%;
+  }
+
+  .hosteleriaNiches__grid {
+    display: flex;
+
+    flex-direction: column;
+  }
+
+  .nicheCard,
+  .nicheCard:nth-child(n) {
+    min-height: 350px;
+
+    grid-column: auto;
+  }
+
+
+  /* FEATURES */
+
+  .hosteleriaFeatures {
+    padding:
+      100px 6%;
+  }
+
+  .hosteleriaFeatures__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featureCard {
+    min-height: 230px;
+  }
+
+
+  /* OPTIMIZATION */
+
+  .hosteleriaOptimize {
+    padding:
+      100px 6%;
+  }
+
+  .hosteleriaOptimize__grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* TEMPLATES */
+
+  .hosteleriaTemplates {
+    padding:
+      100px 6%;
+  }
+
+  .templateCard {
+    width: 285px;
+  }
+
+  .templateCard__image {
+    height: 360px;
+  }
+
+
+  /* BENEFITS */
+
+  .hosteleriaBenefits__image {
+    height: 350px;
+  }
+
+  .hosteleriaBenefits__image img {
+    min-height: 350px;
+  }
+
+  .hosteleriaBenefits__content {
+    padding:
+      80px 6%;
+  }
+
+
+  /* FAQ */
+
+  .hosteleriaFAQ {
+    padding:
+      100px 6%;
+  }
+
+  .faqItem summary {
+    grid-template-columns:
+      25px 1fr 20px;
+
+    gap: 10px;
+  }
+
+  .faqItem summary strong {
+    font-size: 11px;
+  }
+
+  .faqItem__answer {
+    padding:
+      0 35px 25px;
+  }
+
+
+  /* RELATED */
+
+  .hosteleriaRelated {
+    padding:
+      100px 6%;
+  }
+
+  .relatedLinks {
+    grid-template-columns: 1fr;
+  }
+
+  .relatedLinks a,
+  .relatedLinks a:nth-child(2) {
+    border-right: none;
+  }
+
+
+  /* CTA */
+
+  .hosteleriaCTA {
+    padding:
+      110px 6%;
+  }
+
+  .hosteleriaCTA h2 {
+    font-size:
+      clamp(
+        52px,
+        14vw,
+        75px
+      );
+  }
+
+}

@@ -1,0 +1,28 @@
+:root{
+
+    /* Fuentes */
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Inter", sans-serif;
+  
+  --bg-primary:#070b14;
+  --bg-secondary:#111827;
+
+  --card-bg:rgba(255,255,255,.05);
+
+  --text-primary:#ffffff;
+  --text-secondary:#cbd5e1;
+
+  --blue:#2563eb;
+  --cyan:#06b6d4;
+
+  --gradient:
+  linear-gradient(
+    135deg,
+    #2563eb,
+    #06b6d4
+  );
+
+  --radius:20px;
+
+  --container:1300px;
+}

@@ -1,0 +1,1325 @@
+/* =========================================================
+   DELUMIS — ABOUT PAGE
+========================================================= */
+
+.aboutPage {
+  width: 100%;
+  overflow: hidden;
+
+  background: #f5f7fa;
+
+  color: #080d14;
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.aboutPage__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #0891b2;
+
+  font-size: 8px;
+  font-weight: 800;
+
+  letter-spacing: .18em;
+}
+
+.aboutPage__eyebrow::before {
+  content: "";
+
+  width: 20px;
+  height: 1px;
+
+  background: #06b6d4;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.aboutPage__hero {
+  position: relative;
+
+  min-height: 760px;
+
+  display: flex;
+  align-items: center;
+
+  padding:
+    150px 7%
+    100px;
+
+  overflow: hidden;
+
+  background: #edf1f5;
+}
+
+.aboutPage__hero-grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(8,13,20,.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(8,13,20,.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 75px 75px;
+
+  mask-image:
+    linear-gradient(
+      90deg,
+      black,
+      transparent 80%
+    );
+}
+
+.aboutPage__hero-image {
+  position: absolute;
+
+  right: 0;
+  top: 0;
+
+  width: 52%;
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.aboutPage__hero-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter:
+    grayscale(100%)
+    contrast(1.05);
+
+  opacity: .72;
+}
+
+.aboutPage__hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #edf1f5 0%,
+      #edf1f5 38%,
+      rgba(237,241,245,.82) 55%,
+      rgba(237,241,245,.08) 100%
+    );
+}
+
+.aboutPage__hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1150px, 100%);
+
+  margin: auto;
+}
+
+.aboutPage__hero h1 {
+  max-width: 950px;
+
+  margin: 25px 0 0;
+
+  font-size:
+    clamp(
+      58px,
+      8vw,
+      115px
+    );
+
+  line-height: .86;
+
+  letter-spacing: -.075em;
+
+  font-weight: 400;
+}
+
+.aboutPage__hero h1 span {
+  color: #0891b2;
+}
+
+.aboutPage__hero-content > p {
+  max-width: 520px;
+
+  margin-top: 40px;
+
+  color:
+    rgba(8,13,20,.55);
+
+  font-size: 12px;
+
+  line-height: 1.8;
+}
+
+.aboutPage__hero-bottom {
+  display: flex;
+
+  align-items: center;
+
+  gap: 30px;
+
+  margin-top: 65px;
+}
+
+.aboutPage__scroll {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  color:
+    rgba(8,13,20,.4);
+
+  font-size: 8px;
+
+  text-transform: uppercase;
+
+  letter-spacing: .1em;
+}
+
+.aboutPage__scroll span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #06b6d4;
+
+  box-shadow:
+    0 0 15px
+    rgba(6,182,212,.6);
+}
+
+.aboutPage__hero-number {
+  color:
+    rgba(8,13,20,.25);
+
+  font-size: 8px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.aboutPage__intro {
+  width: min(1100px, 100%);
+
+  margin: auto;
+
+  padding:
+    150px 6%;
+
+  display: grid;
+
+  grid-template-columns: 180px 1fr;
+
+  gap: 80px;
+}
+
+.aboutPage__intro-label {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 15px;
+}
+
+.aboutPage__intro-label span {
+  color: #06b6d4;
+
+  font-size: 9px;
+  font-weight: 800;
+}
+
+.aboutPage__intro-label p {
+  margin: 0;
+
+  color:
+    rgba(8,13,20,.35);
+
+  font-size: 8px;
+
+  letter-spacing: .14em;
+}
+
+.aboutPage__intro-content {
+  max-width: 780px;
+}
+
+.aboutPage__intro-content h2 {
+  margin: 0;
+
+  font-size:
+    clamp(
+      48px,
+      6vw,
+      80px
+    );
+
+  line-height: .92;
+
+  letter-spacing: -.065em;
+
+  font-weight: 400;
+}
+
+.aboutPage__intro-content h2 span {
+  color: #0891b2;
+}
+
+.aboutPage__intro-content p {
+  max-width: 650px;
+
+  margin:
+    35px 0 0;
+
+  color:
+    rgba(8,13,20,.48);
+
+  font-size: 12px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   STORY
+========================================================= */
+
+.aboutPage__story {
+  width: min(1200px, 100%);
+
+  margin: auto;
+
+  padding:
+    50px 5%
+    150px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.05fr .95fr;
+
+  gap: 100px;
+
+  align-items: center;
+}
+
+.aboutPage__story-image {
+  position: relative;
+
+  height: 650px;
+
+  overflow: hidden;
+
+  border-radius: 3px;
+}
+
+.aboutPage__story-image::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(6,182,212,.15),
+      transparent 55%
+    );
+
+  pointer-events: none;
+}
+
+.aboutPage__story-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter:
+    grayscale(100%);
+
+  transition:
+    transform .8s ease;
+}
+
+.aboutPage__story-image:hover img {
+  transform: scale(1.04);
+}
+
+.aboutPage__image-tag {
+  position: absolute;
+
+  right: 20px;
+  bottom: 20px;
+
+  z-index: 2;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 12px 15px;
+
+  background:
+    rgba(5,12,19,.85);
+
+  backdrop-filter:
+    blur(12px);
+
+  color: white;
+
+  font-size: 8px;
+}
+
+.aboutPage__image-tag span {
+  color: #06b6d4;
+
+  letter-spacing: .12em;
+}
+
+.aboutPage__image-tag strong {
+  color:
+    rgba(255,255,255,.3);
+}
+
+.aboutPage__story-content {
+  max-width: 500px;
+}
+
+.aboutPage__story-content h2 {
+  margin:
+    25px 0 30px;
+
+  font-size:
+    clamp(
+      45px,
+      5vw,
+      68px
+    );
+
+  line-height: .9;
+
+  letter-spacing: -.06em;
+
+  font-weight: 400;
+}
+
+.aboutPage__story-content h2 span {
+  color: #0891b2;
+}
+
+.aboutPage__story-content p {
+  margin: 0 0 20px;
+
+  color:
+    rgba(8,13,20,.5);
+
+  font-size: 11px;
+
+  line-height: 1.9;
+}
+
+.aboutPage__story-line {
+  width: 60px;
+  height: 1px;
+
+  margin:
+    35px 0 18px;
+
+  background: #06b6d4;
+}
+
+.aboutPage__story-highlight {
+  color: #0891b2;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  letter-spacing: .08em;
+}
+
+
+/* =========================================================
+   PHILOSOPHY
+========================================================= */
+
+.aboutPage__philosophy {
+  padding:
+    130px 6%;
+
+  background: #080e16;
+
+  color: white;
+}
+
+.aboutPage__philosophy-heading {
+  width: min(1100px, 100%);
+
+  margin: auto;
+}
+
+.aboutPage__philosophy-heading h2 {
+  margin:
+    25px 0 70px;
+
+  font-size:
+    clamp(
+      50px,
+      6vw,
+      82px
+    );
+
+  line-height: .9;
+
+  letter-spacing: -.065em;
+
+  font-weight: 400;
+}
+
+.aboutPage__philosophy-heading h2 span {
+  color: #06b6d4;
+}
+
+.aboutPage__philosophy-grid {
+  width: min(1100px, 100%);
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 12px;
+}
+
+.aboutPhilosophyCard {
+  min-height: 280px;
+
+  padding: 28px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  background:
+    rgba(255,255,255,.025);
+
+  transition:
+    border-color .3s ease,
+    background .3s ease;
+}
+
+.aboutPhilosophyCard:hover {
+  border-color:
+    rgba(6,182,212,.4);
+
+  background:
+    rgba(6,182,212,.035);
+}
+
+.aboutPhilosophyCard__top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.aboutPhilosophyCard__top span {
+  color:
+    rgba(255,255,255,.2);
+
+  font-size: 8px;
+}
+
+.aboutPhilosophyCard__top svg {
+  color: #06b6d4;
+}
+
+.aboutPhilosophyCard h3 {
+  margin:
+    65px 0 15px;
+
+  font-size: 28px;
+
+  font-weight: 400;
+
+  letter-spacing: -.04em;
+}
+
+.aboutPhilosophyCard p {
+  margin: 0;
+
+  color:
+    rgba(255,255,255,.35);
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   DIFFERENCE
+========================================================= */
+
+.aboutPage__difference {
+  width: min(1200px, 100%);
+
+  margin: auto;
+
+  padding:
+    150px 5%;
+
+  display: grid;
+
+  grid-template-columns:
+    .9fr 1.1fr;
+
+  gap: 100px;
+
+  align-items: center;
+}
+
+.aboutPage__difference-image {
+  height: 580px;
+
+  overflow: hidden;
+
+  border-radius: 3px;
+}
+
+.aboutPage__difference-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter:
+    grayscale(100%);
+
+  transition:
+    transform .8s ease;
+}
+
+.aboutPage__difference-image:hover img {
+  transform: scale(1.04);
+}
+
+.aboutPage__difference-content {
+  max-width: 560px;
+}
+
+.aboutPage__difference-content h2 {
+  margin:
+    25px 0 25px;
+
+  font-size:
+    clamp(
+      45px,
+      5vw,
+      70px
+    );
+
+  line-height: .9;
+
+  letter-spacing: -.06em;
+
+  font-weight: 400;
+}
+
+.aboutPage__difference-content h2 span {
+  color: #0891b2;
+}
+
+.aboutPage__difference-content > p {
+  margin-bottom: 40px;
+
+  color:
+    rgba(8,13,20,.48);
+
+  font-size: 11px;
+
+  line-height: 1.9;
+}
+
+.aboutPage__features {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+.aboutFeature {
+  display: grid;
+
+  grid-template-columns:
+    40px 1fr;
+
+  gap: 15px;
+}
+
+.aboutFeature > div {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 38px;
+  height: 38px;
+
+  border-radius: 9px;
+
+  background:
+    rgba(6,182,212,.08);
+
+  color: #0891b2;
+}
+
+.aboutFeature h3 {
+  margin: 0 0 5px;
+
+  font-size: 11px;
+}
+
+.aboutFeature p {
+  margin: 0;
+
+  color:
+    rgba(8,13,20,.4);
+
+  font-size: 9px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.aboutPage__process {
+  padding:
+    140px 6%;
+
+  background:
+    #edf1f5;
+}
+
+.aboutPage__process-heading {
+  width: min(1100px, 100%);
+
+  margin: auto;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 50px;
+}
+
+.aboutPage__process-heading h2 {
+  margin:
+    25px 0 0;
+
+  font-size:
+    clamp(
+      50px,
+      6vw,
+      80px
+    );
+
+  line-height: .88;
+
+  letter-spacing: -.065em;
+
+  font-weight: 400;
+}
+
+.aboutPage__process-heading h2 span {
+  color: #0891b2;
+}
+
+.aboutPage__process-heading > p {
+  max-width: 350px;
+
+  margin: 0;
+
+  color:
+    rgba(8,13,20,.45);
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+.aboutPage__process-list {
+  width: min(1100px, 100%);
+
+  margin:
+    80px auto 0;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  border-top:
+    1px solid
+    rgba(8,13,20,.12);
+}
+
+.aboutProcessStep {
+  min-height: 300px;
+
+  padding:
+    25px 20px;
+
+  border-right:
+    1px solid
+    rgba(8,13,20,.1);
+
+  transition:
+    background .3s ease;
+}
+
+.aboutProcessStep:last-child {
+  border-right: none;
+}
+
+.aboutProcessStep:hover {
+  background:
+    rgba(6,182,212,.04);
+}
+
+.aboutProcessStep__number {
+  color: #0891b2;
+
+  font-size: 8px;
+
+  font-weight: 800;
+}
+
+.aboutProcessStep__icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 45px;
+  height: 45px;
+
+  margin-top: 60px;
+
+  border-radius: 10px;
+
+  background: white;
+
+  color: #0891b2;
+
+  box-shadow:
+    0 10px 30px
+    rgba(8,13,20,.05);
+}
+
+.aboutProcessStep h3 {
+  margin:
+    20px 0 10px;
+
+  font-size: 15px;
+
+  font-weight: 500;
+}
+
+.aboutProcessStep p {
+  max-width: 190px;
+
+  margin: 0;
+
+  color:
+    rgba(8,13,20,.42);
+
+  font-size: 9px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.aboutPage__values {
+  padding:
+    130px 6%;
+
+  background: white;
+}
+
+.aboutPage__values-inner {
+  width: min(1100px, 100%);
+
+  margin: auto;
+}
+
+.aboutPage__values-title h2 {
+  margin:
+    25px 0 70px;
+
+  font-size:
+    clamp(
+      50px,
+      6vw,
+      80px
+    );
+
+  line-height: .9;
+
+  letter-spacing: -.065em;
+
+  font-weight: 400;
+}
+
+.aboutPage__values-title h2 span {
+  color: #0891b2;
+}
+
+.aboutPage__values-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 40px;
+}
+
+.aboutPage__values-grid > div {
+  padding-top: 20px;
+
+  border-top:
+    1px solid
+    rgba(8,13,20,.12);
+}
+
+.aboutPage__values-grid strong {
+  color: #06b6d4;
+
+  font-size: 8px;
+}
+
+.aboutPage__values-grid h3 {
+  margin:
+    25px 0 10px;
+
+  font-size: 20px;
+
+  font-weight: 400;
+}
+
+.aboutPage__values-grid p {
+  margin: 0;
+
+  color:
+    rgba(8,13,20,.4);
+
+  font-size: 9px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.aboutPage__cta {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    160px 6%;
+
+  text-align: center;
+
+  background: #070c13;
+
+  color: white;
+}
+
+.aboutPage__cta-glow {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  left: 50%;
+  top: 50%;
+
+  transform:
+    translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background:
+    rgba(6,182,212,.08);
+
+  filter:
+    blur(100px);
+
+  pointer-events: none;
+}
+
+.aboutPage__cta > * {
+  position: relative;
+
+  z-index: 2;
+}
+
+.aboutPage__cta h2 {
+  margin:
+    30px auto;
+
+  max-width: 900px;
+
+  font-size:
+    clamp(
+      55px,
+      8vw,
+      105px
+    );
+
+  line-height: .84;
+
+  letter-spacing: -.07em;
+
+  font-weight: 400;
+}
+
+.aboutPage__cta h2 span {
+  color: #06b6d4;
+}
+
+.aboutPage__cta > p {
+  max-width: 480px;
+
+  margin:
+    35px auto;
+
+  color:
+    rgba(255,255,255,.38);
+
+  font-size: 10px;
+
+  line-height: 1.8;
+}
+
+.aboutPage__cta-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding:
+    14px 22px;
+
+  border-radius: 9px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #06b6d4,
+      #4cc9f0
+    );
+
+  color: #041017;
+
+  font-size: 9px;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.aboutPage__cta-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 15px 40px
+    rgba(6,182,212,.2);
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 950px) {
+
+  .aboutPage__hero-image {
+    width: 60%;
+  }
+
+  .aboutPage__intro {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+  }
+
+  .aboutPage__story,
+  .aboutPage__difference {
+    grid-template-columns: 1fr;
+
+    gap: 60px;
+  }
+
+  .aboutPage__story-image,
+  .aboutPage__difference-image {
+    height: 500px;
+  }
+
+  .aboutPage__philosophy-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .aboutPage__philosophy-grid
+  .aboutPhilosophyCard:last-child {
+    grid-column:
+      1 / -1;
+  }
+
+  .aboutPage__process-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .aboutPage__process-list {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .aboutProcessStep:nth-child(2) {
+    border-right: none;
+  }
+
+  .aboutProcessStep:nth-child(-n+2) {
+    border-bottom:
+      1px solid
+      rgba(8,13,20,.1);
+  }
+
+  .aboutPage__values-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .aboutPage__hero {
+    min-height: 700px;
+
+    padding:
+      130px 6%
+      70px;
+  }
+
+  .aboutPage__hero-image {
+    width: 100%;
+  }
+
+  .aboutPage__hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(237,241,245,.98),
+        rgba(237,241,245,.8)
+      );
+  }
+
+  .aboutPage__hero h1 {
+    font-size:
+      clamp(
+        53px,
+        14vw,
+        78px
+      );
+  }
+
+  .aboutPage__hero-content > p {
+    max-width: 400px;
+  }
+
+  .aboutPage__intro {
+    padding:
+      100px 6%;
+  }
+
+  .aboutPage__intro-content h2 {
+    font-size: 48px;
+  }
+
+  .aboutPage__story {
+    padding:
+      30px 6%
+      100px;
+  }
+
+  .aboutPage__story-image {
+    height: 420px;
+  }
+
+  .aboutPage__story-content h2 {
+    font-size: 48px;
+  }
+
+  .aboutPage__philosophy {
+    padding:
+      100px 6%;
+  }
+
+  .aboutPage__philosophy-heading h2 {
+    font-size: 50px;
+  }
+
+  .aboutPage__philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutPage__philosophy-grid
+  .aboutPhilosophyCard:last-child {
+    grid-column: auto;
+  }
+
+  .aboutPhilosophyCard {
+    min-height: 230px;
+  }
+
+  .aboutPhilosophyCard h3 {
+    margin-top: 45px;
+  }
+
+  .aboutPage__difference {
+    padding:
+      100px 6%;
+  }
+
+  .aboutPage__difference-image {
+    height: 400px;
+  }
+
+  .aboutPage__difference-content h2 {
+    font-size: 48px;
+  }
+
+  .aboutPage__process {
+    padding:
+      100px 6%;
+  }
+
+  .aboutPage__process-heading h2 {
+    font-size: 50px;
+  }
+
+  .aboutPage__process-list {
+    grid-template-columns: 1fr;
+
+    margin-top: 60px;
+  }
+
+  .aboutProcessStep {
+    min-height: auto;
+
+    padding:
+      30px 0;
+
+    border-right: none;
+
+    border-bottom:
+      1px solid
+      rgba(8,13,20,.1);
+  }
+
+  .aboutProcessStep:last-child {
+    border-bottom: none;
+  }
+
+  .aboutProcessStep__icon {
+    margin-top: 35px;
+  }
+
+  .aboutPage__values {
+    padding:
+      100px 6%;
+  }
+
+  .aboutPage__values-title h2 {
+    font-size: 50px;
+  }
+
+  .aboutPage__values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .aboutPage__cta {
+    padding:
+      110px 6%;
+  }
+
+  .aboutPage__cta h2 {
+    font-size:
+      clamp(
+        52px,
+        14vw,
+        75px
+      );
+  }
+
+}
